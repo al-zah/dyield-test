@@ -19,6 +19,8 @@ export class SearchPage extends React.Component<{ appStore?: GlobalStore }> {
     this.props.appStore!.search.setQuery(event.target.value);
   };
 
+  handleKeyPress = (e: React.KeyboardEvent<HTMLDivElement>) => e.key === 'Enter' && this.props.appStore!.search.fetchUsers();
+
   render() {
     const { fetchUsers, users, query } = this.props.appStore!.search;
 
@@ -33,6 +35,7 @@ export class SearchPage extends React.Component<{ appStore?: GlobalStore }> {
                       id="user-filter"
                       value={query}
                       onChange={this.handleFilterChange}
+                      onKeyPress={this.handleKeyPress}
                       startAdornment={<InputAdornment position="start"><SearchIcon /></InputAdornment>}
                   />
                 </FormControl>
