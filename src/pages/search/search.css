@@ -1,0 +1,25 @@
+.search {
+  margin-top: 50px;
+}
+
+.search-box {
+  width: 60%;
+  margin: 0 auto;
+  min-width: 300px;
+}
+
+.search-box > div {
+  padding: 20px;
+}
+
+.results {
+  width: 60%;
+  margin: 30px auto 0 auto;
+  min-width: 300px;
+}
+
+.search-controls {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
